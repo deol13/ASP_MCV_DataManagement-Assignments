@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/StyleSheet.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <ul>
+                    <li>
+                        <p class="navLink"> @Html.ActionLink("Home", "Index", "Home", null, new { @class = "actionLink" }) </p>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <p>&copy;Dennis Olsen, @DateTime.Now.ToString("yy-MM-dd")</p>
+    </footer>
+</body>
+</html>
